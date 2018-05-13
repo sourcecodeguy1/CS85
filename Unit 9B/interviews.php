@@ -72,7 +72,7 @@ if(empty($_POST['iname']) || empty($_POST['pos']) || empty($_POST['dofin']) || e
         $SQLstring = "INSERT INTO $TableName VALUES(NULL, '$interviewer_name', '$position', '$date_of_interview', '$candidates_name', '$communicationab', '$professionalap', '$compskills', '$businessknd', '$inter_comment')";
         $QueryResult = mysqli_query($DBConnect, $SQLstring);
 
-        if($QueryResult === FALSE){ // Checks if last name and first are inserted into the table other wise return false.
+        if($QueryResult === FALSE){ // Checks if the input field values are inserted into the table other wise return false.
             echo "<p>Unable to execute the query.</p>" . "<p>Error code " . mysqli_errno($DBConnect) . ": " . mysqli_error($DBConnect) . "</p>";
         }else{
             echo "<h1>Thank you for registering!</h1>"; // Data inserted successfully!!
